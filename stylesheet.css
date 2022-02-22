@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.max-width {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 80px;
+  align-items: center;
+}
+
+/* navbar classes */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  z-index: 2;
+  justify-content: space-between;
+}
+
+.navbar .max-width {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-search {
+  background: none;
+  height: 35px;
+}
+
+/* To-do=> Align cursor to placeholder starting position */
+
+input {
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  /* padding: 4px 4px; */
+}
+
+input::placeholder {
+  font-size: 15px;
+  color: rgb(233, 222, 222);
+  /* padding: 12px; */
+  padding-left: 12px;
+}
+
+input:focus {
+  outline: none;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  left: -27px;
+}
+
+.ham-icon {
+  color: white;
+  cursor: pointer;
+}
+
+/* First Section */
+
+/* background image  */
+.first-section {
+  display: flex;
+  background-image: url("images/bg-image.jpeg");
+  height: 85vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -1000px;
+}
+
+.section-pos {
+  padding-top: 140px;
+}
+
+/* section text */
+.section-text {
+  text-align: center;
+  max-width: 1000px;
+  line-height: 1.5;
+}
+
+.heading {
+  font-size: 84px;
+  font-weight: 700;
+  color: white;
+}
+
+.body-text {
+  margin-top: 10px;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  max-width: 1000px;
+}
+
+/* section buttons */
+
+.section-btns {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn-1,
+.btn-2 {
+  padding: 16px 56px;
+  border-radius: 28px;
+  border: none;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-1 {
+  background-color: #12c557;
+  color: white;
+}
+
+.btn-2 {
+  justify-content: center;
+  align-items: center;
+}
+
+/* add transition later */
+.btn-2 a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn-2-icon {
+  margin-right: 8px;
+}   
+
+/* Second section */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 80px;
+  max-width: 800px;
+}
+
+.sec-2-imgs {
+  width: 200px;
+  height: auto;
+}
+
+.sec-2-para {
+  padding-left: 30px;
+}
+
+.item-name {
+  font-size: 20px;
+}
+
+.item-price {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+/*.item-content {
+   max-width: 400px; 
+}*/
+
+/* media queries */
+
+/* tablets and ipads */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .first-section {
+    background-position: 0px -510px;
+  }
+
+  .section-pos {
+    padding-top: 175px;
+  }
+
+  .heading {
+    font-size: 64px;
+  }
+
+  .body-text {
+    font-size: 18px;
+    max-width: 750px;
+  }
+
+  .btn-1,
+  .btn-2 {
+    padding: 14px 42px;
+    font-size: 12px;
+  }
+
+  /* section 2 */
+
+  .column {
+    padding: 40px;
+  }
+
+  .sec-2-imgs {
+    width: 150px;
+    height: 150px;
+  }
+
+  .item-name {
+    font-size: 14px;
+  }
+
+  .item-price {
+    font-size: 24px;
+  }
+
+  .item-content {
+    font-size: 14px;
+  }
+}
+
+/* mobile phones */
+@media (min-width: 481px) and (max-width: 767px) {
+  .first-section {
+    background-position: 0 0px;
+  }
+
+  .heading {
+    font-size: 64px;
+  }
+
+  .body-text {
+    font-size: 16px;
+  }
+
+  .section-pos {
+    padding-top: 190px;
+  }
+
+  .column{
+    padding: 50px 25px
+  }
+
+  .sec-2-imgs{
+    width: 150px;
+    height: 150px ;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .first-section{
+    background-position: 0px 0px;
+    width: 150%;
+    height: 100vh;
+  }
+  
+  .row{
+    width: 150%;
+  }
+
+}
+
+/* desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .first-section{
+      background-position: 0 -600px;
+  }
+
+  .column{
+      padding: 35px;
+  }
+}
